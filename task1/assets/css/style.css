@@ -1,0 +1,409 @@
+/* Moving the body into the right place */
+
+html, body {
+    color: #7A707B;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+/* This all links to one thing */
+
+a {
+    color: #131821;
+    font-weight: 400;
+}
+
+a:active {
+    color: #233759;
+}
+
+a:hover {
+    color: #4066A5;
+}
+
+/* Making headlines awesome */
+
+h1 {
+    font-family: Georgia;
+    color: #131821;
+    font-size: 24px;
+    font-weight: 400;
+    width: 90%;
+    margin: 20px auto;
+}
+
+h3 {
+    color: #6A707B;
+    font-weight: 400;
+    font-size: 14px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 14px;
+    color: #6A707B;
+    font-weight: normal;
+}
+
+/* Focusing on the input text element */
+
+input[type=text] {
+    display: flex;
+    margin-right: auto;
+    background: #ffffff;
+    padding: 20px;
+    color: #6A707B;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+input[type=text]:hover {
+    color: #131821;
+}
+
+button {
+    background-color: #ffffff;
+    background-image: url(../images/icons/ic_arrow-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 40px 20px 20px;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #E3E3E4;
+    border-left: 3px solid #4066A5;
+}
+
+.input-group:hover {
+    border: 1px solid #4066A5;
+    border-left: 3px solid #4066A5;
+    box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+
+.input-group:hover > button {
+    background-image: url(../images/icons/ic_arrow-2.svg);
+}
+
+/* Putting the checkbox into perspective */
+
+div.checkbox {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+/* Dismantling the checkbox */
+
+input[type=checkbox] {
+    visibility: hidden;
+    margin: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+    border: 1px solid #E3E3E4;
+    border-radius: 3px;
+    content: "\00a0";
+    display: inline-block;
+    margin-right: 1em;
+    padding: 3px;
+    width: 16px;
+    height: 16px;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background: #4066A5;
+    color: #ffffff;
+    content: url(../images/icons/ic_checkmark.svg);
+    text-align: center;
+}
+
+/* Making the <hr> tag fashionable */
+
+hr {
+    width: 90%;
+    margin: 50px auto;
+    border: 0;
+    height: 1px;
+    background-color: #E3E3E4;
+}
+
+/* Setting the container as a flexbox */
+
+div#container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+/* Navigating to the moon and back */
+
+div#container .nav {
+    height: 60px;
+    line-height: 60px;
+}
+
+div#container .nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0 100px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+div#container .nav ul li {
+    margin-right: 15px;
+}
+
+div#container .nav ul li:last-child {
+    margin-right: 0;
+}
+
+div#container .nav ul li.logo {
+    background: url(../images/logo.svg) no-repeat left;
+    height: 60px;
+    width: 30%;
+    margin-right: auto;
+    margin-left: 35px;
+}
+
+div#container .nav ul li a {
+    color: #6A707B;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Setting the width of the main content block */
+
+div#container .main {
+    width: 75%;
+    padding: 50px 0;
+    justify-content: start;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+}
+
+div#container .main .content {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 100px;
+}
+
+div#container .main .content .success-image {
+    background-image: url(../images/icons/ic_success.svg);
+    margin: 0 0 20px 20px;
+    height: 70px;
+    width: 44px;
+}
+  
+div#container .main .content .invalid-feedback {
+font-size: 12px;
+color: red;
+margin: 10px 0;
+display: block;
+}
+
+div#container .main .content .social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+div#container .main .content .social-icons .icon {
+    border: 2px solid #E2E3E4;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    margin-right: 20px;
+}
+
+div#container .main .content .social-icons .icon:last-child {
+    margin-right: 0;
+}
+
+div#container .main .content .social-icons .icon:hover, div#container .main .content .social-icons .icon:active {
+    box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+/* Facebook Icon */
+
+div#container .main .content .social-icons .facebook {
+    background: url(../images/icons/ic_facebook-2.svg) no-repeat center;
+}
+
+div#container .main .content .social-icons .facebook:hover {
+    background: url(../images/icons/ic_facebook-1.svg) no-repeat center;
+    background-color: #4267B2;
+}
+
+div#container .main .content .social-icons .facebook:active {
+    background-color: #2F4A80;
+}
+
+/* Instagram Icon */
+
+div#container .main .content .social-icons .instagram {
+    background: url(../images/icons/ic_instagram-2.svg) no-repeat center;
+}
+
+div#container .main .content .social-icons .instagram:hover {
+    background: url(../images/icons/ic_instagram-1.svg) no-repeat center;
+    background-color: #C13584;
+}
+
+div#container .main .content .social-icons .instagram:active {
+    background-color: #8F2762;
+}
+
+/* Twitter Icon */
+
+div#container .main .content .social-icons .twitter {
+    background: url(../images/icons/ic_twitter-2.svg) no-repeat center;
+}
+
+div#container .main .content .social-icons .twitter:hover {
+    background: url(../images/icons/ic_twitter-1.svg) no-repeat center;
+    background-color: #1DA1F2;
+}
+
+div#container .main .content .social-icons .twitter:active {
+    background-color: #177FBF;
+}
+
+/* YouTube Icon */
+
+div#container .main .content .social-icons .youtube {
+    background: url(../images/icons/ic_youtube-2.svg) no-repeat center;
+}
+
+div#container .main .content .social-icons .youtube:hover {
+    background: url(../images/icons/ic_youtube-1.svg) no-repeat center;
+    background-color: #FF0000;
+}
+
+div#container .main .content .social-icons .youtube:active {
+    background-color: #CC0000;
+}
+
+/* Adding the background image */
+
+div#container .bg {
+    justify-content: end;
+    background-image: url(../images/image_summer-1.png);
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+}
+
+/* Fixing responsivness for phones and smaller tablets */
+
+@media screen and (max-width: 540px) {
+    html, body {
+        background-image: url(../images/image_summer.png);
+        background-size: cover;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    h3 {
+        margin: 20px 0 30px 0;
+    }
+
+    div.checkbox {
+        margin-left: 0;
+    }
+
+    div#container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    div#container .bg {
+        display: none;
+    }
+
+    div#container .main {
+        margin: 0 auto;
+        width: 80%;
+        min-height: 40%;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    div#container .main .content {
+        margin: 30px auto;
+        width: 100%;
+    }
+
+    div.checkbox {
+        margin-top: 20px;
+    }
+
+    div#container .nav {
+        background: #ffffff;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    div#container .nav ul {
+        padding: 0 20px;
+    }
+
+    div#container .nav ul li.logo {
+        margin-left: 0;
+        background-image: url(../images/mobile_logo.svg);
+    }
+
+    div#container .nav ul li a {
+        font-size: 12px;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+}
+
+/* Fixing responsivness for larger tablets */
+
+@media screen and (max-width: 1024px) {
+    div#container .nav ul li a {
+        font-size: 12px;
+    }
+
+    div#container .nav ul {
+        padding: 0 10px;
+    }
+
+    div#container .nav ul li.logo {
+        margin-left: 0;
+    }
+}

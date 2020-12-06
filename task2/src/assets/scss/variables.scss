@@ -1,0 +1,42 @@
+/* Base Colours */
+$base-font: 'Arial';
+$white: #ffffff;
+$text-color: #7A707B;
+$paragraph-color: #6A707B;
+$hr-color: #E3E3E4;
+$main-section-bg: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+
+/* Links */
+$link-color: #131821;
+$link-active-color: #233759;
+$link-hover-color: #4066A5;
+$nav-link-color: #6A707B;
+
+/* Headings */
+$main-heading-color: #131821;
+$sub-heading-color: #6A707B;
+
+/* Inputs */
+$input-hover-color: #131821;
+$input-color: #6A707B;
+$input-border: 1px solid #E3E3E4;
+$input-border-left: 3px solid #4066A5;
+$input-hover-border: 1px solid #4066A5;
+$input-hover-border-left: 3px solid #4066A5;
+$input-box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+
+$checkbox-bg-color: #4066A5;
+$checkbox-border: 1px solid #E3E3E4;
+
+/* Social Icons */
+$social-icon-border: 2px solid #E2E3E4;
+$social-icon-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+
+$facebook-hover-bg: #4267B2;
+$facebook-active-bg: #2F4A80;
+$instagram-hover-bg: #C13584;
+$instagram-active-bg: #8F2762;
+$twitter-hover-bg: #1DA1F2;
+$twitter-active-bg: #177FBF;
+$youtube-hover-bg: #FF0000;
+$youtube-active-bg: #CC0000;

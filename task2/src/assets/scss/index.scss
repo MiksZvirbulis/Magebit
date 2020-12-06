@@ -1,0 +1,165 @@
+/* Moving the body into the right place */
+
+@import 'variables';
+
+html, body {
+  color: $text-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $base-font;
+}
+
+#root, .App {
+  height: 100%;
+}
+
+/* This all links to one thing */
+
+a {
+  color: $link-color;
+  font-weight: 400;
+}
+
+a:active {
+  color: $link-active-color;
+}
+
+a:hover {
+  color: $link-hover-color;
+}
+
+/* Making headlines awesome */
+
+h1 {
+  font-family: Georgia;
+  color: $main-heading-color;
+  font-size: 24px;
+  font-weight: 400;
+  width: 90%;
+  margin: 20px auto;
+}
+
+h3 {
+  color: $sub-heading-color;
+  font-weight: 400;
+  font-size: 14px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+p {
+  font-size: 14px;
+  color: $paragraph-color;
+  font-weight: normal;
+}
+
+/* Focusing on the input text element */
+
+input[type=text] {
+  display: flex;
+  margin-right: auto;
+  background: $white;
+  padding: 20px;
+  color: $input-color;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: $input-hover-color;
+  }
+}
+
+button {
+  background-color: $white;
+  background-image: url(../images/icons/ic_arrow-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 40px 20px 20px;
+  cursor: pointer;
+  display: flex;
+  margin-left: auto;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  border: $input-border;
+  border-left: $input-border-left;
+
+  &:hover {
+    border: $input-hover-border;
+    border-left: $input-hover-border-left;
+    box-shadow: $input-box-shadow;
+  }
+
+  &:hover > button {
+      background-image: url(../images/icons/ic_arrow-2.svg);
+  }
+
+}
+
+/* Putting the checkbox into perspective */
+
+.checkbox {
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+/* Dismantling the checkbox */
+
+input[type=checkbox] {
+  visibility: hidden;
+  margin: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label:before {
+  border: $checkbox-border;
+  border-radius: 3px;
+  content: "\00a0";
+  display: inline-block;
+  margin-right: 1em;
+  padding: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: $checkbox-bg-color;
+  color: $white;
+  content: url(../images/icons/ic_checkmark.svg);
+  text-align: center;
+}
+
+/* Making the <hr> tag fashionable */
+
+hr {
+  width: 90%;
+  margin: 50px auto;
+  border: 0;
+  height: 1px;
+  background-color: $hr-color;
+}
+
+.hidden {
+  display: none;
+}

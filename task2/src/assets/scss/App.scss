@@ -1,0 +1,268 @@
+/* Setting the container as a flexbox */
+
+@import 'variables';
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+/* Navigating to the moon and back */
+
+.nav {
+  height: 60px;
+  line-height: 60px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0 100px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    li {
+      margin-right: 15px;
+
+      a {
+        color: $nav-link-color;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.logo {
+        background: url(../images/logo.svg) no-repeat left;
+        height: 60px;
+        width: 30%;
+        margin-right: auto;
+        margin-left: 35px;
+      }
+    } // li ends
+  } // ul ends
+} // nav ends
+
+/* Setting the width of the main content block */
+
+.main {
+  width: 75%;
+  padding: 50px 0;
+  justify-content: start;
+  background: $main-section-bg;
+
+.content {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 100px;
+
+.success-image {
+  background-image: url(../images/icons/ic_success.svg);
+  margin: 0 0 20px 20px;
+  height: 70px;
+  width: 44px;
+}
+
+.invalid-feedback {
+  font-size: 12px;
+  color: red;
+  margin: 10px 0;
+  display: block;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+
+.icon {
+  border: $social-icon-border;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  margin-right: 20px;
+  font-size: 0;
+
+&:last-child {
+  margin-right: 0;
+}
+
+&:hover, &:active {
+  box-shadow: $social-icon-box-shadow;
+}
+
+} // icon ends
+
+/* Facebook Icon */
+
+.facebook {
+  background: url(../images/icons/ic_facebook-2.svg) no-repeat center;
+
+  &:hover {
+    background: url(../images/icons/ic_facebook-1.svg) no-repeat center;
+    background-color: $facebook-hover-bg;
+  }
+
+  &:active {
+    background-color: $facebook-active-bg;
+  }
+
+} //facebook ends
+
+/* Instagram Icon */
+
+.instagram {
+  background: url(../images/icons/ic_instagram-2.svg) no-repeat center;
+
+  &:hover {
+    background: url(../images/icons/ic_instagram-1.svg) no-repeat center;
+    background-color: $instagram-hover-bg;
+  }
+
+  &:active {
+    background-color: $instagram-active-bg;
+  }
+
+} //instagram ends
+
+/* Twitter Icon */
+
+.twitter {
+  background: url(../images/icons/ic_twitter-2.svg) no-repeat center;
+
+  &:hover {
+    background: url(../images/icons/ic_twitter-1.svg) no-repeat center;
+    background-color: $twitter-hover-bg;
+  }
+
+  &:active {
+    background-color: $twitter-active-bg;
+  }
+
+} // twitter ends
+
+/* YouTube Icon */
+
+.youtube {
+  background: url(../images/icons/ic_youtube-2.svg) no-repeat center;
+
+  &:hover {
+    background: url(../images/icons/ic_youtube-1.svg) no-repeat center;
+    background-color: $youtube-hover-bg;
+  }
+
+  &:active {
+    background-color: $youtube-active-bg;
+  }
+
+} // youtube ends
+
+} // social-icons ends
+
+} // content ends
+
+} // main ends
+
+/* Adding the background image */
+
+.bg {
+  justify-content: end;
+  background-image: url(../images/image_summer-1.png);
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+}
+
+} // container ends
+
+/* Fixing responsivness for phones and smaller tablets */
+
+@media screen and (max-width: 540px) {
+  html, body {
+      background-image: url(../images/image_summer.png);
+      background-size: cover;
+  }
+
+  h1 {
+      margin: 0;
+  }
+
+  h3 {
+      margin: 20px 0 30px 0;
+  }
+
+  .checkbox {
+      margin-left: 0;
+  }
+
+  #container {
+    flex-direction: column;
+    justify-content: center;
+
+  .bg {
+    display: none;
+  }
+
+  .main {
+    margin: 0 auto;
+    width: 80%;
+    min-height: 40%;
+    padding: 0 20px;
+    justify-content: center;
+
+  .content {
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  } // Main ends
+
+  .nav {
+    background: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  ul {
+    padding: 0 20px;
+
+    li.logo {
+      margin-left: 0;
+      background-image: url(../images/mobile_logo.svg);
+
+      a {
+        font-size: 12px;
+      }
+    } // li ends
+  } // ul ends
+
+  } // nav ends
+
+  } // container ends
+
+  div.checkbox {
+      margin-top: 20px;
+  }
+
+  hr {
+      margin: 20px 0;
+  }
+}
+
+/* Fixing responsivness for larger tablets */
+
+@media screen and (max-width: 1024px) {
+  #container .nav ul {
+      padding: 0 10px;
+
+      li a {
+          font-size: 12px;
+      }
+
+      li.logo {
+        margin-left: 0;
+      }
+  }
+}
